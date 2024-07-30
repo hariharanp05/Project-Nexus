@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pugazh's_Food_Court</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="body"></div>
+    <nav>
+        <div class="head">Pugazh's Restaurant</div>
+        <div class="links">
+        <a href="/">Log In</a>
+        <a href="/signup">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="/auth/signup" method="post">
+            <div class="headlog">Sign Up</div>
+            {{#if msg}}
+            <p class="{{msg_type}}">{{msg}}</p>
+            {{/if}}
+            <div class="inp">
+                <label for="FullName">Full Name</label>
+                <input type="text" name="FullName" id="fname">
+                </div>
+            <div class="inp">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="mail">
+            </div>
+            <div class="inp">
+                <label for="Password">Password</label>
+                <input type="password" name="Password" id="pass">
+            </div>
+            <div class="inp">
+                <label for="Confirm_Password">Confirm Password</label>
+                <input type="password" name="Confirm_Password" id="cpass">
+            </div>
+            <div class="btn">
+                <button class="login" type="submit">SIGN UP</button>
+            </div>
+        </form>
+        <div class="login">Already a Member? <a href="/">Log in</a></div>
+    </div>
+
+</body>
+</html>
